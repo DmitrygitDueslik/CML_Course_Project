@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+  <meta name="description" content="Характеристики и цена автомобиля BMW." >
+  <title>BMW — Характеристики</title>
+  <link rel="stylesheet" href="css/styles.css" >
+
+  <script>
+    /* ── База данных автомобилей (из cars.xml) ── */
+    var CARS = {
+      1: {
+        name: 'BMW X4', model: 'xDrive30i M Sport',
+        series: 'X Серия', body: 'SAC (кросс-купе)', year: 2025,
+        badge: 'M Sport', badgeColor: '#2563eb',
+        price: 72000,
+        desc: 'Стильный кроссовер-купе с характером M Sport. Идеальное сочетание динамики SAC и практичности полноценного SUV. Система BMW iDrive 8, панорамная крыша, адаптивная подвеска M Sport.',
+        exterior: 'images/BMW_X4_xDrive30i.png',
+        interior: 'images/BMW_X4_xDrive30i(2).png  ',
+        specs: {
+          'Двигатель': '2.0L TwinPower Turbo I4',
+          'Мощность': '249 л.с. / 183 кВт',
+          'Крутящий момент': '400 Нм',
+          'Привод': 'xDrive AWD',
+          'КПП': '8-ступ. Steptronic',
+          'Разгон 0–100': '6.3 с',
+          'Макс. скорость': '235 км/ч',
+          'Расход топлива': '7.4 л/100 км',
+          'Длина': '4 953 мм',
+          'Ширина': '1 918 мм',
+          'Высота': '1 621 мм',
+          'Масса': '1 855 кг',
+          'Объём багажника': '525 л'
+        }
+      },
+      2: {
+        name: 'BMW 4 Series', model: 'Convertible M Sport',
+        series: '4 Серия', body: 'Кабриолет', year: 2025,
+        badge: 'Кабриолет', badgeColor: '#2563eb',
+        price: 68000,
+        desc: 'Свобода движения в каждом километре. Электрический складной верх открывается за 18 секунд. Система BMW Live Cockpit Professional, адаптивный ксенон, подогрев сидений.',
+        exterior: 'images/BMW_4_Series_Convertible.png',
+        interior: 'images/BMW_4_Series_Convertible(2).png',
+        specs: {
+          'Двигатель': '2.0L TwinPower Turbo I4',
+          'Мощность': '249 л.с. / 183 кВт',
+          'Крутящий момент': '400 Нм',
+          'Привод': 'RWD / xDrive',
+          'КПП': '8-ступ. Steptronic',
+          'Разгон 0–100': '6.4 с',
+          'Макс. скорость': '250 км/ч',
+          'Расход топлива': '7.8 л/100 км',
+          'Длина': '4 783 мм',
+          'Ширина': '1 852 мм',
+          'Высота': '1 389 мм',
+          'Масса': '1 775 кг',
+          'Крыша': 'Электрическая складная'
+        }
+      },
+      3: {
+        name: 'BMW M5', model: 'Competition xDrive',
+        series: 'M Серия', body: 'Седан', year: 2025,
+        badge: 'M Power', badgeColor: '#ef4444',
+        price: 135000,
+        desc: 'Абсолютная мощь гибридной силовой установки. V8 + электромотор, суммарная отдача 727 л.с. Система M xDrive, активные амортизаторы, карбон-керамические тормоза.',
+        exterior: 'images/BMW_M5_Competition.png',
+        interior: 'images/BMW_M5_Competition(2).png',
+        specs: {
+          'Двигатель': '4.4L V8 Biturbo + Электромотор',
+          'Мощность': '727 л.с. / 535 кВт',
+          'Крутящий момент': '1 000 Нм',
+          'Привод': 'M xDrive AWD',
+          'КПП': '8-ступ. M Steptronic',
+          'Разгон 0–100': '3.4 с',
+          'Макс. скорость': '305 км/ч',
+          'Расход топлива': '10.2 л/100 км',
+          'Запас хода EV': '69 км',
+          'Длина': '5 097 мм',
+          'Ширина': '1 903 мм',
+          'Масса': '2 345 кг'
+        }
+      },
+      4: {
+        name: 'BMW i3s', model: 'Electric Urban',
+        series: 'i Серия', body: 'Хэтчбек', year: 2025,
+        badge: 'Электро', badgeColor: '#10b981',
+        price: 45000,
+        desc: 'Иконка электрического города. Лёгкий кузов из CFRP, электромотор на задней оси, запас хода до 280 км. Идеален для городской езды и экологичного стиля жизни.',
+        exterior: 'images/BMW_i3s.png',
+        interior: 'images/BMWI3_2().jpg',
+        fallback: 'https://images.unsplash.com/photo-1696955655268-41181d2d3e58?w=900&q=85',
+        specs: {
+          'Двигатель': 'Электромотор синхронный',
+          'Мощность': '184 л.с. / 135 кВт',
+          'Крутящий момент': '270 Нм',
+          'Привод': 'RWD (задний)',
+          'КПП': 'Одноступенчатая',
+          'Разгон 0–100': '6.9 с',
+          'Макс. скорость': '160 км/ч',
+          'Запас хода': '280 км (WLTP)',
+          'Батарея': '42.2 кВт·ч',
+          'Зарядка DC': '50 кВт',
+          'Масса': '1 365 кг',
+          'Кузов': 'CFRP + Алюминий'
+        }
+      },
+      5: {
+        name: 'BMW X6', model: 'M50i xDrive',
+        series: 'X Серия', body: 'SAC', year: 2025,
+        badge: 'M Performance', badgeColor: '#ef4444',
+        price: 115000,
+        desc: 'Спорт и роскошь в кузове купе. V8 TwinTurbo, система M Sport Pro, активное рулевое управление, пневматическая подвеска. Иконичный дизайн кросс-купе.',
+        exterior: 'images/BMW_X6_M50i.png',
+        interior: 'images/BMW_X6_M50i(2).png',
+        specs: {
+          'Двигатель': '4.4L V8 TwinTurbo',
+          'Мощность': '530 л.с. / 390 кВт',
+          'Крутящий момент': '750 Нм',
+          'Привод': 'xDrive AWD',
+          'КПП': '8-ступ. Steptronic Sport',
+          'Разгон 0–100': '4.3 с',
+          'Макс. скорость': '270 км/ч',
+          'Расход топлива': '11.0 л/100 км',
+          'Длина': '4 935 мм',
+          'Ширина': '2 004 мм',
+          'Масса': '2 180 кг',
+          'Колёса': '21 дюйм'
+        }
+      },
+      6: {
+        name: 'BMW M2', model: 'Competition',
+        series: 'M Серия', body: 'Купе', year: 2025,
+        badge: 'Трековая', badgeColor: '#ef4444',
+        price: 78000,
+        desc: 'Чистый драйв. Заднеприводное купе для трека и городских улиц. I6 Biturbo, механическая КПП, активный дифференциал, система M Track Mode.',
+        exterior: 'images/BMW_M2_Competition.png',
+        interior: 'images/BMW_M2_Competition(2).png',
+        specs: {
+          'Двигатель': '3.0L I6 M TwinPower Turbo',
+          'Мощность': '460 л.с. / 338 кВт',
+          'Крутящий момент': '550 Нм',
+          'Привод': 'RWD (задний)',
+          'КПП': '6-ступ. М акула / 8-ступ.',
+          'Разгон 0–100': '4.1 с',
+          'Макс. скорость': '285 км/ч',
+          'Расход топлива': '10.0 л/100 км',
+          'Длина': '4 580 мм',
+          'Масса': '1 730 кг',
+          'Тормоза': 'M Sport стальные/карбон',
+          'Колёса': '19/20 дюйм'
+        }
+      },
+      7: {
+        name: 'BMW X1', model: 'sDrive18i M Sport',
+        series: 'X Серия', body: 'SAV', year: 2025,
+        badge: 'Компакт', badgeColor: '#2563eb',
+        price: 42000,
+        desc: 'Компактный SAV нового поколения. Система iDrive 9 с изогнутым дисплеем, новая архитектура UKL2, просторный салон для компактного класса.',
+        exterior: 'images/BMW_X1_sDrive18i.png',
+        interior: 'images/BMW_X1_sDrive18i(2).png',
+        specs: {
+          'Двигатель': '1.5L TwinPower Turbo I3',
+          'Мощность': '136 л.с. / 100 кВт',
+          'Крутящий момент': '230 Нм',
+          'Привод': 'FWD / xDrive',
+          'КПП': '7-ступ. DCT / 8-ступ.',
+          'Разгон 0–100': '9.2 с',
+          'Макс. скорость': '210 км/ч',
+          'Расход топлива': '6.2 л/100 км',
+          'Длина': '4 500 мм',
+          'Масса': '1 540 кг',
+          'Дисплей': 'BMW iDrive 9 изогнутый'
+        }
+      },
+      8: {
+        name: 'BMW Z4', model: 'M40i Roadster',
+        series: 'Z Серия', body: 'Родстер', year: 2025,
+        badge: 'Родстер', badgeColor: '#2563eb',
+        price: 75000,
+        desc: 'Эмоции под открытым небом. I6 M TwinPower, сбалансированное шасси 50/50, адаптивная подвеска Variable Sport. Электрическая мягкая крыша складывается за 10 сек.',
+        exterior: 'images/BMW_Z4_M40i.png',
+        interior: 'images/BMW_Z4_M40i(2).png',
+        specs: {
+          'Двигатель': '3.0L I6 M TwinPower Turbo',
+          'Мощность': '382 л.с. / 281 кВт',
+          'Крутящий момент': '500 Нм',
+          'Привод': 'RWD (задний)',
+          'КПП': '8-ступ. Steptronic Sport',
+          'Разгон 0–100': '4.4 с',
+          'Макс. скорость': '250 км/ч',
+          'Расход топлива': '8.4 л/100 км',
+          'Масса': '1 495 кг',
+          'Крыша': 'Электр. мягкая, 10 сек'
+        }
+      },
+      9: {
+        name: 'BMW X7', model: 'xDrive40i M Sport',
+        series: 'X Серия', body: 'SAV Full-size', year: 2025,
+        badge: 'Флагман', badgeColor: '#f59e0b',
+        price: 105000,
+        desc: 'Флагманский внедорожник с потолком Sky Lounge и 7 местами. Mild Hybrid, пневматическая подвеска, 4-зонный климат, массаж для всех сидений.',
+        exterior: 'images/BMW_X7_xDrive40i.png',
+        interior: 'images/BMW X7(2).jpg',
+        specs: {
+          'Двигатель': '3.0L I6 Mild Hybrid',
+          'Мощность': '381 л.с. / 280 кВт',
+          'Крутящий момент': '520 Нм',
+          'Привод': 'xDrive AWD',
+          'КПП': '8-ступ. Steptronic',
+          'Разгон 0–100': '5.8 с',
+          'Макс. скорость': '250 км/ч',
+          'Расход топлива': '9.2 л/100 км',
+          'Длина': '5 151 мм',
+          'Масса': '2 510 кг',
+          'Места': '7',
+          'Крыша': 'Sky Lounge панорама'
+        }
+      },
+      10: {
+        name: 'BMW i4', model: 'eDrive40 Gran Coupé',
+        series: 'i Серия', body: 'Электро Гран Купе', year: 2025,
+        badge: 'Электро', badgeColor: '#10b981',
+        price: 62000,
+        desc: 'Электрическая грация с запасом хода 590 км. Задний привод, тихая кабина, рекуперативное торможение. Оснащён BMW iDrive 8 и системой навигации с AR.',
+        exterior: 'images/BMW_i4_eDrive40.png',
+        interior: 'images/BMW_i4_eDrive40(2).png',
+        specs: {
+          'Двигатель': 'Электромотор синхронный',
+          'Мощность': '340 л.с. / 250 кВт',
+          'Крутящий момент': '430 Нм',
+          'Привод': 'RWD (задний)',
+          'КПП': 'Одноступенчатая',
+          'Разгон 0–100': '5.7 с',
+          'Макс. скорость': '190 км/ч',
+          'Запас хода': '590 км (WLTP)',
+          'Батарея': '83.9 кВт·ч',
+          'Зарядка DC': '205 кВт',
+          'Масса': '2 125 кг'
+        }
+      },
+      11: {
+        name: 'BMW 5 Series', model: '530i xDrive',
+        series: '5 Серия', body: 'Седан', year: 2025,
+        badge: 'Бизнес', badgeColor: '#2563eb',
+        price: 65000,
+        desc: 'Бизнес-класс нового поколения. Семейство 5 Series переосмыслено с полностью новой архитектурой CLAR2, изогнутым дисплеем iDrive 8 и полным набором ассистентов.',
+        exterior: 'images/BMW_5_Series_530i.png',
+        interior: 'images/bmw5i23-04.jpg',
+        specs: {
+          'Двигатель': '2.0L TwinPower Turbo I4',
+          'Мощность': '255 л.с. / 188 кВт',
+          'Крутящий момент': '400 Нм',
+          'Привод': 'xDrive AWD',
+          'КПП': '8-ступ. Steptronic',
+          'Разгон 0–100': '6.2 с',
+          'Макс. скорость': '250 км/ч',
+          'Расход топлива': '7.5 л/100 км',
+          'Длина': '5 060 мм',
+          'Ширина': '1 900 мм',
+          'Масса': '1 870 кг'
+        }
+      }
+    };
+
+    /* ──  данные авто── */
+    document.addEventListener('DOMContentLoaded', function () {
+      var id = parseInt(new URLSearchParams(location.search).get('id')) || 1;
+      var car = CARS[id] || CARS[1];
+
+      /* Title */
+      document.title = car.name + ' — BMW Drive';
+
+      /* Breadcrumb */
+      document.getElementById('bc-car').textContent = car.name;
+
+      /* Badge */
+      var badge = document.getElementById('car-badge');
+      badge.textContent = car.badge;
+      badge.style.background = car.badgeColor;
+
+      /* Имя, описание, цена */
+      document.getElementById('car-name').textContent = car.name + ' ' + car.model;
+      document.getElementById('car-series-sub').textContent = car.series + ' · ' + car.body + ' · ' + car.year;
+      document.getElementById('car-desc').textContent = car.desc;
+      document.getElementById('car-price').textContent = '$' + car.price.toLocaleString();
+
+      /* Кнопки */
+      document.getElementById('btn-buy').onclick = function () { addToCart(String(id), car.name, car.price); };
+
+      /* Главное фото */
+      var mainPhoto = document.getElementById('mainPhoto');
+      mainPhoto.alt = car.name;
+      mainPhoto.src = car.exterior;
+      mainPhoto.onerror = function () { this.src = car.fallback; };
+
+      /* Миниатюры */
+      var thumb1 = document.getElementById('thumb1');
+      var thumb2 = document.getElementById('thumb2');
+      thumb1.src = car.exterior;
+      thumb1.onerror = function () { this.src = car.fallback; };
+      thumb1.onclick = function () { setPhoto(this, car.exterior); };
+
+      thumb2.src = car.interior;
+      thumb2.onerror = function () { this.src = car.fallback; };
+      thumb2.onclick = function () { setPhoto(this, car.interior); };
+
+      /* Таблица характеристик */
+      var tbody = document.getElementById('specs-tbody');
+      var html = '';
+      for (var key in car.specs) {
+        html += '<tr><td>' + key + '</td><td>' + car.specs[key] + '</td></tr>';
+      }
+      tbody.innerHTML = html;
+
+      /* Похожие авто (следующие 3 по ID) */
+      var relatedGrid = document.getElementById('related-grid');
+      var relHtml = '';
+      var count = 0;
+      for (var i = 1; i <= 11 && count < 3; i++) {
+        if (i !== id && CARS[i]) {
+          var c = CARS[i];
+          relHtml += '<article class="car-card">' +
+            '<a href="car-detail.html?id=' + i + '" class="car-card-img">' +
+            '<img src="' + c.exterior + '" alt="' + c.name + '" loading="lazy" onerror="this.src=\'' + c.fallback + '\'">' +
+            '<span class="car-badge" style="background:' + c.badgeColor + '">' + c.badge + '</span>' +
+            '</a>' +
+            '<div class="car-card-body">' +
+            '<p class="car-series">' + c.series + '</p>' +
+            '<h3 class="car-name">' + c.name + '</h3>' +
+            '<p class="car-spec-line">' + c.body + '</p>' +
+            '<div class="car-card-footer">' +
+            '<div class="car-price"><span>от </span>$' + c.price.toLocaleString() + '</div>' +
+            '<a href="car-detail.html?id=' + i + '" class="car-link">Подробнее →</a>' +
+            '</div></div></article>';
+          count++;
+        }
+      }
+      relatedGrid.innerHTML = relHtml;
+    });
+  </script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container header-top-inner">
+        <div class="header-contacts">
+          <a href="tel:+375291234567"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.09 2.82 2 2 0 012.08 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+            </svg>+375 (29) 123-45-67</a>
+          <a href="mailto:info@bmw.by"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>info@bmw.by</a>
+        </div>
+        <div class="header-address"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>Минск, пр-т Независимости, 120</div>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="container header-main-inner">
+        <a href="index.html" class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" height="40">
+            <rect width="200" height="50" fill="#000" rx="3" />
+            <text x="10" y="38" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900"
+              fill="#fff">BMW</text>
+            <rect x="96" y="7" width="2" height="36" fill="#2563eb" />
+            <text x="105" y="23" font-family="Arial,sans-serif" font-size="8" fill="#2563eb"
+              letter-spacing="2">ОФИЦИАЛЬНЫЙ</text>
+            <text x="105" y="37" font-family="Arial,sans-serif" font-size="8" fill="#fff"
+              letter-spacing="2">ДИЛЕР</text>
+          </svg>
+        </a>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Главная</a>
+          <a href="catalog.html" class="nav-link active">Каталог</a>
+          <a href="testdrive.html" class="nav-link">Тест-драйв</a>
+          <a href="contacts.html" class="nav-link">Контакты</a>
+        </nav>
+        <div class="header-actions">
+          <button class="action-btn" onclick="toggleCartModal()" aria-label="Корзина"><svg viewBox="0 0 24 24">
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+            </svg><span class="badge-count" id="cart-count">0</span></button>
+        </div>
+        <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="mobile-nav">
+      <a href="index.html" class="nav-link">Главная</a>
+      <a href="catalog.html" class="nav-link">Каталог</a>
+      <a href="testdrive.html" class="nav-link">Тест-драйв</a>
+      <a href="contacts.html" class="nav-link">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO АВТО -->
+    <section class="car-detail-hero">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Навигация">
+          <a href="index.html">Главная</a>
+          <span class="sep">›</span>
+          <a href="catalog.html">Каталог</a>
+          <span class="sep">›</span>
+          <span class="current" id="bc-car">BMW</span>
+        </nav>
+
+        <div class="car-detail-inner">
+
+          <!-- Галерея -->
+          <div class="car-gallery">
+            <img id="mainPhoto" class="car-gallery-main" src="" alt="BMW" />
+            <div class="car-gallery-thumbs">
+              <img id="thumb1" class="thumb active" src="" alt="Экстерьер" />
+              <img id="thumb2" class="thumb" src="" alt="Интерьер" />
+            </div>
+          </div>
+
+          <!-- Информация -->
+          <div>
+            <span class="car-detail-badge" id="car-badge">BMW</span>
+            <p style="font-size:.82rem;color:#9ca3af;margin-bottom:.5rem" id="car-series-sub"></p>
+            <h1 class="car-detail-name" id="car-name">BMW</h1>
+            <p class="car-detail-desc" id="car-desc"></p>
+
+            <div class="car-detail-price-block">
+              <p class="car-detail-price-label">Цена от</p>
+              <p class="car-detail-price" id="car-price">—</p>
+            </div>
+
+            <div class="car-detail-actions">
+              <button id="btn-buy" class="btn btn-blue">
+                Купить / В корзину
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="9" cy="21" r="1" />
+                  <circle cx="20" cy="21" r="1" />
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                </svg>
+              </button>
+              <a href="testdrive.html" class="btn btn-outline">Тест-драйв</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ХАРАКТЕРИСТИКИ -->
+    <section class="specs-section">
+      <div class="container">
+        <h2 class="section-title" style="margin-bottom:2rem">
+          Технические <span>характеристики</span>
+        </h2>
+        <div class="specs-grid">
+          <div class="specs-block">
+            <h3>Параметры автомобиля</h3>
+            <table class="specs-table">
+              <tbody id="specs-tbody">
+                <tr>
+                  <td colspan="2" style="color:#9ca3af;padding:1rem 0">Загрузка…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="specs-block">
+            <h3>Комплектация входит в цену</h3>
+            <table class="specs-table">
+              <tbody>
+                <tr>
+                  <td>Дисплей</td>
+                  <td>BMW iDrive 8 изогнутый</td>
+                </tr>
+                <tr>
+                  <td>Климат</td>
+                  <td>2-зонный автоматический</td>
+                </tr>
+                <tr>
+                  <td>Сиденья</td>
+                  <td>Sport с подогревом</td>
+                </tr>
+                <tr>
+                  <td>Подвеска</td>
+                  <td>Адаптивная M Sport</td>
+                </tr>
+                <tr>
+                  <td>Освещение</td>
+                  <td>Full LED с лазером</td>
+                </tr>
+                <tr>
+                  <td>Мультимедиа</td>
+                  <td>HiFi + Apple CarPlay</td>
+                </tr>
+                <tr>
+                  <td>Гарантия</td>
+                  <td>3 года / 100 000 км</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ПОХОЖИЕ МОДЕЛИ -->
+    <section class="related-section">
+      <div class="container">
+        <h2 class="section-title" style="margin-bottom:2rem">Похожие <span>модели</span></h2>
+        <div class="cars-grid" id="related-grid">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">BMW<span>.</span></div>
+          <p class="footer-about">Официальный дилер BMW в Республике Беларусь.</p>
+        </div>
+        <div>
+          <p class="footer-col-title">Модели</p>
+          <ul class="footer-links">
+            <li><a href="catalog.html?s=5">Седаны</a></li>
+            <li><a href="catalog.html?s=X">SAV</a></li>
+            <li><a href="catalog.html?s=M">M Серия</a></li>
+            <li><a href="catalog.html?s=i">Электро</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Услуги</p>
+          <ul class="footer-links">
+            <li><a href="testdrive.html">Тест-драйв</a></li>
+            <li><a href="contacts.html">Сервис</a></li>
+            <li><a href="contacts.html">Запчасти</a></li>
+            <li><a href="contacts.html">Trade-In</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Контакты</p>
+          <ul class="footer-contacts">
+            <li>+375 (29) 123-45-67</li>
+            <li>info@bmw.by</li>
+            <li>Минск, пр-т Независимости, 120</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 BMW Drive. Все права защищены.</span>
+        <span>Курсовой проект — КЯР, БГТУ, Группа 1-6 </span>
+        <span>Выполнил: Зырянов Д.Н.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="cart-modal" role="dialog">
+    <div class="modal-box"><button class="modal-close" onclick="closeModal('cart-modal')">×</button>
+      <p class="modal-title"> Корзина</p>
+      <div id="cart-items"></div>
+      <div id="cart-total-block" class="cart-total" style="display:none">Итого: $<span id="cart-sum">0</span><br><button
+          onclick="alert(' Заявка принята!')" class="btn btn-blue"
+          style="width:100%;margin-top:1rem;justify-content:center">Оформить заявку</button></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

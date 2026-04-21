@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Запись на тест-драйв BMW — выберите модель и удобное время.">
+  <title>Тест-драйв — BMW Drive</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <div class="container header-top-inner">
+      <div class="header-contacts">
+        <a href="tel:+375291234567"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.09 2.82 2 2 0 012.08 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>+375 (29) 123-45-67</a>
+        <a href="mailto:info@bmw.by"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@bmw.by</a>
+      </div>
+      <div class="header-address"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Минск, пр-т Независимости, 120</div>
+    </div>
+  </div>
+  <div class="header-main">
+    <div class="container header-main-inner">
+      <a href="index.html" class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" height="40">
+          <rect width="200" height="50" fill="#000" rx="3"/>
+          <text x="10" y="38" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900" fill="#fff">BMW</text>
+          <rect x="96" y="7" width="2" height="36" fill="#2563eb"/>
+          <text x="105" y="23" font-family="Arial,sans-serif" font-size="8" fill="#2563eb" letter-spacing="2">ОФИЦИАЛЬНЫЙ</text>
+          <text x="105" y="37" font-family="Arial,sans-serif" font-size="8" fill="#fff" letter-spacing="2">ДИЛЕР</text>
+        </svg>
+      </a>
+      <nav class="nav">
+        <a href="index.html"     class="nav-link">Главная</a>
+        <a href="catalog.html"   class="nav-link">Каталог</a>
+        <a href="testdrive.html" class="nav-link active">Тест-драйв</a>
+        <a href="contacts.html"  class="nav-link">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <button class="action-btn" onclick="toggleCartModal()" aria-label="Корзина"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="badge-count" id="cart-count">0</span></button>
+      </div>
+      <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mobile-nav">
+    <a href="index.html" class="nav-link">Главная</a>
+    <a href="catalog.html" class="nav-link">Каталог</a>
+    <a href="testdrive.html" class="nav-link">Тест-драйв</a>
+    <a href="contacts.html" class="nav-link">Контакты</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="testdrive-hero-img">
+    <img src="images/slides.jfif" alt="BMW тест-драйв"
+         loading="eager">
+    <div class="overlay"></div>
+    <div class="text">
+      <div class="container">
+        <p class="page-hero-label">Бесплатно · Без обязательств</p>
+        <h1 class="page-hero-title">Запишитесь на<br>тест-драйв BMW</h1>
+        <p class="page-hero-sub">Ощутите удовольствие от вождения лично — выберите модель и удобное время</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- КАК ЭТО РАБОТАЕТ -->
+  <section class="section">
+    <div class="container">
+
+      <h2 class="section-title" style="text-align:center;margin-bottom:2.5rem">
+        Как это <span>работает</span>
+      </h2>
+
+      <div class="info-steps">
+        <div class="info-step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <h3>1. Заполните форму</h3>
+          <p>Выберите модель, дату и время. Займёт не больше 2 минут — без регистрации.</p>
+        </div>
+        <div class="info-step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.09 2.82 2 2 0 012.08 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </div>
+          <h3>2. Подтверждение</h3>
+          <p>Менеджер перезвонит в течение 30 минут для подтверждения удобного времени.</p>
+        </div>
+        <div class="info-step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>3. Приезжайте</h3>
+          <p>Возьмите водительское удостоверение. Маршрут подберём под ваши предпочтения.</p>
+        </div>
+      </div>
+
+
+      <!-- ФОРМА ЗАПИСИ -->
+      <form class="form-wrap testdrive-form" novalidate aria-label="Форма записи на тест-драйв">
+        <p class="form-title">Форма записи на тест-драйв</p>
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label class="form-label" for="td-name">Имя и фамилия *</label>
+            <input type="text" id="td-name" class="form-input"
+                   placeholder="Иван Иванов" required autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="td-phone">Телефон *</label>
+            <input type="tel" id="td-phone" class="form-input"
+                   placeholder="+375 (29) 000-00-00" required autocomplete="tel">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="td-email">Email</label>
+            <input type="email" id="td-email" class="form-input"
+                   placeholder="your@email.com" autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="td-model">Модель для тест-драйва *</label>
+            <select id="td-model" class="form-select" required>
+              <option value="">— Выберите модель —</option>
+              <option value="x4">BMW X4 xDrive30i M Sport</option>
+              <option value="4s">BMW 4 Series Convertible</option>
+              <option value="m5">BMW M5 Competition xDrive</option>
+              <option value="i3s">BMW i3s Electric Urban</option>
+              <option value="x6">BMW X6 M50i xDrive</option>
+              <option value="m2">BMW M2 Competition</option>
+              <option value="x1">BMW X1 sDrive18i M Sport</option>
+              <option value="z4">BMW Z4 M40i Roadster</option>
+              <option value="x7">BMW X7 xDrive40i M Sport</option>
+              <option value="i4">BMW i4 eDrive40 Gran Coupé</option>
+              <option value="5s">BMW 5 Series 530i xDrive</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="td-date">Желаемая дата *</label>
+            <input type="date" id="td-date" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="td-time">Время</label>
+            <select id="td-time" class="form-select">
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+              <option value="18:00">18:00</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="td-license">Категория ВУ</label>
+            <select id="td-license" class="form-select">
+              <option value="B">B</option>
+              <option value="B+E">B+E</option>
+              <option value="A+B">A + B</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="td-exp">Стаж вождения</label>
+            <select id="td-exp" class="form-select">
+              <option value="1-3">1–3 года</option>
+              <option value="3-5">3–5 лет</option>
+              <option value="5-10">5–10 лет</option>
+              <option value="10+">Более 10 лет</option>
+            </select>
+          </div>
+
+          <div class="form-group full">
+            <label class="form-label" for="td-comment">Комментарий</label>
+            <textarea id="td-comment" class="form-textarea"
+                      placeholder="Дополнительные пожелания, вопросы о комплектации..."></textarea>
+          </div>
+
+          <p class="form-hint">
+            * Поля обязательны. Данные защищены и не передаются третьим лицам.
+          </p>
+
+        </div>
+
+        <button type="submit" class="btn btn-blue" style="width:100%;justify-content:center;padding:1rem;font-size:1rem">
+          Записаться на тест-драйв
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+
+      <!-- Сообщение об успешной отправке -->
+      <div class="form-success" role="alert" aria-live="polite">
+         Отлично! Ваша заявка принята. Менеджер свяжется с вами в течение 30 минут для подтверждения даты и времени тест-драйва.
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo">BMW<span>.</span></div><p class="footer-about">Официальный дилер BMW в Республике Беларусь.</p></div>
+      <div><p class="footer-col-title">Модели</p><ul class="footer-links"><li><a href="catalog.html?s=5">Седаны</a></li><li><a href="catalog.html?s=X">SAV</a></li><li><a href="catalog.html?s=M">M Серия</a></li><li><a href="catalog.html?s=i">Электро</a></li></ul></div>
+      <div><p class="footer-col-title">Услуги</p><ul class="footer-links"><li><a href="testdrive.html">Тест-драйв</a></li><li><a href="contacts.html">Сервис</a></li><li><a href="contacts.html">Запчасти</a></li><li><a href="contacts.html">Trade-In</a></li></ul></div>
+      <div><p class="footer-col-title">Контакты</p><ul class="footer-contacts"><li>+375 (29) 123-45-67</li><li>info@bmw.by</li><li>Минск, пр-т Независимости, 120</li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 BMW Drive. Все права защищены.</span>
+        <span>Курсовой проект — КЯР, БГТУ, Группа 1-6 </span>
+        <span>Выполнил: Зырянов Д.Н.</span> </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="cart-modal" role="dialog"><div class="modal-box"><button class="modal-close" onclick="closeModal('cart-modal')">×</button><p class="modal-title"> Корзина</p><div id="cart-items"></div><div id="cart-total-block" class="cart-total" style="display:none">Итого: $<span id="cart-sum">0</span><br><button onclick="alert(' Заявка принята!')" class="btn btn-blue" style="width:100%;margin-top:1rem;justify-content:center">Оформить</button></div></div></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

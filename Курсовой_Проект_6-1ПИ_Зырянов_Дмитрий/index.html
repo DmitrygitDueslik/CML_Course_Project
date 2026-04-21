@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+  <meta name="description" content="BMW Drive — официальный дилер BMW в Беларуси." >
+  <title>BMW Drive — Главная</title>
+  <link rel="stylesheet" href="css/styles.css" >
+</head>
+
+<body>
+
+  <!--  HEADER  -->
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container header-top-inner">
+        <div class="header-contacts">
+          <a href="tel:+375291234567">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.09 2.82 2 2 0 012.08 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.62-.62a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+            </svg>
+            +375 (29) 123-45-67
+          </a>
+          <a href="mailto:info@bmw.by">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            info@bmw.by
+          </a>
+        </div>
+        <div class="header-address">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          Минск, пр-т Независимости, 120
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container header-main-inner">
+
+        <!-- Лого — SVG  -->
+        <a href="index.html" class="logo" aria-label="BMW Drive — главная">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" height="40" role="img" aria-label="BMW Drive">
+            <rect width="200" height="50" fill="#000" rx="3" />
+            <text x="10" y="38" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900"
+              fill="#fff">BMW</text>
+            <rect x="96" y="7" width="2" height="36" fill="#2563eb" />
+            <text x="105" y="23" font-family="Arial,sans-serif" font-size="8" fill="#2563eb"
+              letter-spacing="2">ОФИЦИАЛЬНЫЙ</text>
+            <text x="105" y="37" font-family="Arial,sans-serif" font-size="8" fill="#fff"
+              letter-spacing="2">ДИЛЕР</text>
+          </svg>
+        </a>
+
+        <nav class="nav" aria-label="Основное меню">
+          <a href="index.html" class="nav-link active">Главная</a>
+          <a href="catalog.html" class="nav-link">Каталог</a>
+          <a href="testdrive.html" class="nav-link">Тест-драйв</a>
+          <a href="contacts.html" class="nav-link">Контакты</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="action-btn" onclick="toggleCartModal()" aria-label="Корзина">
+            <svg viewBox="0 0 24 24">
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+            </svg>
+            <span class="badge-count" id="cart-count">0</span>
+          </button>
+        </div>
+
+        <button class="burger" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" aria-label="Мобильное меню">
+      <a href="index.html" class="nav-link">Главная</a>
+      <a href="catalog.html" class="nav-link">Каталог</a>
+      <a href="testdrive.html" class="nav-link">Тест-драйв</a>
+      <a href="contacts.html" class="nav-link">Контакты</a>
+    </nav>
+  </header>
+
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- JS-слайдер  -->
+    <section class="hero js-hero" aria-label="Главный баннер">
+      <div class="hero-slides">
+
+        <!-- Слайд 1: BMW 7 Series -->
+        <div class="hero-slide js-slide active-slide">
+          <img src="images/slides3.jfif" alt="BMW 7 Series" >
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="container">
+              <div class="slide-text">
+                <p class="hero-label">Удовольствие от вождения</p>
+                <h1 class="hero-title">THE 7</h1>
+                <p class="hero-desc">BMW 7 Series — воплощение роскоши и технологий нового поколения</p>
+                <a href="catalog.html" class="btn btn-blue">
+                  Узнать больше
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Слайд 2: BMW iX -->
+        <div class="hero-slide js-slide">
+          <img src="images/slides2.jfif" alt="BMW iX" >
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="container">
+              <div class="slide-text">
+                <p class="hero-label">Электрическое будущее</p>
+                <h1 class="hero-title">BMW iX</h1>
+                <p class="hero-desc">Полностью электрический SAV — 630 км запаса хода. Будущее уже здесь.</p>
+                <a href="testdrive.html" class="btn btn-blue">
+                  Тест-драйв
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Слайд 3: BMW M -->
+        <div class="hero-slide js-slide">
+          <img src="images/slides.jfif" alt="BMW M">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="container">
+              <div class="slide-text">
+                <p class="hero-label">Чистая производительность</p>
+                <h1 class="hero-title">BMW M</h1>
+                <p class="hero-desc">M Performance — 510 л.с. спортивного духа в каждом движении</p>
+                <a href="catalog.html?s=M" class="btn btn-blue">
+                  Каталог M серии
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Стрелки навигации -->
+      <button class="slider-arrow slider-prev" id="slider-prev" aria-label="Предыдущий слайд">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+      <button class="slider-arrow slider-next" id="slider-next" aria-label="Следующий слайд">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </button>
+
+      <!-- Точки-индикаторы -->
+      <div class="hero-dots">
+        <button class="hero-dot active-dot" data-index="0" aria-label="Слайд 1"></button>
+        <button class="hero-dot" data-index="1" aria-label="Слайд 2"></button>
+        <button class="hero-dot" data-index="2" aria-label="Слайд 3"></button>
+      </div>
+    </section>
+
+    <!-- ─── СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ ─── -->
+    <section class="section section-gray">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Специальные <span>предложения</span></h2>
+            <p class="section-subtitle">Лучшие модели по выгодным условиям</p>
+          </div>
+          <a href="catalog.html" class="btn btn-outline-dark">Весь каталог →</a>
+        </div>
+
+        <div class="cars-grid">
+
+          <!-- BMW X4 -->
+          <article class="car-card">
+            <a href="car-detail.html?id=1" class="car-card-img" aria-label="Подробнее о BMW X4">
+              <img src="images/BMW_X4_xDrive30i.png" alt="BMW X4"
+                  
+                loading="lazy" >
+              <span class="car-badge">M Sport</span>
+            </a>
+            <div class="car-card-body">
+              <p class="car-series">X Серия • xDrive30i</p>
+              <h3 class="car-name">BMW X4</h3>
+              <p class="car-spec-line">249 л.с. • SAC • 6.3 с до 100</p>
+              <div class="car-card-footer">
+                <div class="car-price"><span>от </span>$72 000</div>
+                <div class="car-actions">
+                  <button onclick="addToCart('1','BMW X4',72000)" class="btn btn-blue"
+                    style="padding:.38rem .9rem;font-size:.78rem">Купить</button>
+                  <a href="car-detail.html?id=1" class="car-link">Детали →</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- BMW M5 -->
+          <article class="car-card">
+            <a href="car-detail.html?id=3" class="car-card-img" aria-label="Подробнее о BMW M5">
+              <img src="images/BMW_M5_Competition.png" alt="BMW M5"
+                                loading="lazy" >
+              <span class="car-badge" style="background:#ef4444">M Power</span>
+            </a>
+            <div class="car-card-body">
+              <p class="car-series">M Серия • Competition</p>
+              <h3 class="car-name">BMW M5</h3>
+              <p class="car-spec-line">727 л.с. • Гибрид V8 • 3.4 с до 100</p>
+              <div class="car-card-footer">
+                <div class="car-price"><span>от </span>$135 000</div>
+                <div class="car-actions">
+                  <button onclick="addToCart('3','BMW M5',135000)" class="btn btn-blue"
+                    style="padding:.38rem .9rem;font-size:.78rem">Купить</button>
+                  <a href="car-detail.html?id=3" class="car-link">Детали →</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- BMW i3s -->
+          <article class="car-card">
+            <a href="car-detail.html?id=4" class="car-card-img" aria-label="Подробнее о BMW i3s">
+              <img src="images/BMW_i3s.png" alt="BMW i3s"
+               
+                loading="lazy" >
+              <span class="car-badge" style="background:#10b981">Электро</span>
+            </a>
+            <div class="car-card-body">
+              <p class="car-series">i Серия • Urban Electric</p>
+              <h3 class="car-name">BMW i3s</h3>
+              <p class="car-spec-line">184 л.с. • Электро • 280 км запас</p>
+              <div class="car-card-footer">
+                <div class="car-price"><span>от </span>$45 000</div>
+                <div class="car-actions">
+                  <button onclick="addToCart('4','BMW i3s',45000)" class="btn btn-blue"
+                    style="padding:.38rem .9rem;font-size:.78rem">Купить</button>
+                  <a href="car-detail.html?id=4" class="car-link">Детали →</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ─── ПРЕИМУЩЕСТВА ─── -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title" style="text-align:center;margin-bottom:2.75rem">
+          Почему выбирают <span>BMW</span>
+        </h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Инновации</h3>
+            <p class="feature-desc">Система BMW iDrive нового поколения, активный круиз-контроль и передовые технологии
+              безопасности.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Безопасность</h3>
+            <p class="feature-desc">Системы предупреждения о столкновении, помощь при смене полосы, парковочный
+              ассистент.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Качество</h3>
+            <p class="feature-desc">Немецкое качество, ручная сборка и гарантия 3 года / 100 000 км на каждый
+              автомобиль.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ─── СТАТИСТИКА ─── -->
+    <aside class="stats-bar" aria-label="Показатели дилера">
+      <div class="container">
+        <div class="stats-grid">
+          <div><span class="stat-num">25+</span><span class="stat-label">Лет на рынке</span></div>
+          <div><span class="stat-num">5000+</span><span class="stat-label">Довольных клиентов</span></div>
+          <div><span class="stat-num">11</span><span class="stat-label">Моделей в каталоге</span></div>
+          <div><span class="stat-num">24/7</span><span class="stat-label">Поддержка</span></div>
+        </div>
+      </div>
+    </aside>
+
+
+    <!-- ─── CTA ─── -->
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">Запишитесь на тест-драйв</h2>
+        <p class="cta-desc">Ощутите удовольствие от вождения BMW лично — бесплатно и без обязательств. Любая модель из
+          каталога.</p>
+        <a href="testdrive.html" class="btn btn-blue">
+          Записаться сейчас
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!--  FOOTER  -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">BMW<span>.</span></div>
+          <p class="footer-about">Официальный дилер BMW в Республике Беларусь. Продажа, сервис и тест-драйвы новых
+            автомобилей.</p>
+        </div>
+        <div>
+          <p class="footer-col-title">Модели</p>
+          <ul class="footer-links">
+            <li><a href="catalog.html?s=5">Седаны</a></li>
+            <li><a href="catalog.html?s=X">SAV (кроссоверы)</a></li>
+            <li><a href="catalog.html?s=M">M Серия</a></li>
+            <li><a href="catalog.html?s=i">Электромобили</a></li>
+            <li><a href="catalog.html?s=Z">Родстеры</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Услуги</p>
+          <ul class="footer-links">
+            <li><a href="testdrive.html">Тест-драйв</a></li>
+            <li><a href="contacts.html">Сервис</a></li>
+            <li><a href="contacts.html">Запчасти</a></li>
+            <li><a href="contacts.html">Trade-In</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Контакты</p>
+          <ul class="footer-contacts">
+            <li>+375 (29) 123-45-67</li>
+            <li>info@bmw.by</li>
+            <li>Минск, пр-т Независимости, 120</li>
+            <li>Пн–Пт: 9:00–20:00</li>
+            <li>Сб–Вс: 10:00–18:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 BMW Drive. Все права защищены.</span>
+        <span>Курсовой проект — КЯР, БГТУ, Группа 1-6 </span>
+        <span>Выполнил: Зырянов Д.Н.</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- МОДАЛЬНЫЕ ОКНА  -->
+  <div class="modal-overlay" id="cart-modal" role="dialog" aria-modal="true" aria-label="Корзина">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('cart-modal')" aria-label="Закрыть">×</button>
+      <p class="modal-title"> Корзина</p>
+      <div id="cart-items"></div>
+      <div id="cart-total-block" class="cart-total" style="display:none">
+        Итого: $<span id="cart-sum">0</span>
+        <br>
+        <button onclick="alert(' Заявка отправлена! Менеджер свяжется с вами в течение 30 минут.')"
+          class="btn btn-blue" style="width:100%;margin-top:1rem;justify-content:center">
+          Оформить заявку
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

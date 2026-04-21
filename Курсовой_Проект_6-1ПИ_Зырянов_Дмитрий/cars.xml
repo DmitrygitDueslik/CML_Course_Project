@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+<meta>
+<title>BMW Drive — Каталог 2025</title>
+<year>2025</year>
+<dealer>BMW Беларусь</dealer>
+<address>Минск, пр-т Независимости, 120</address>
+</meta>
+<cars>
+<!-- 1. X4 -->
+<car id="1" series="X" segment="premium" featured="true">
+<name>BMW X4</name>
+<model>xDrive30i M Sport</model>
+<body>SAC</body>
+<engine>2.0L TwinPower Turbo</engine>
+<power>249 л.с.</power>
+<acceleration>6.3</acceleration>
+<price>72000</price>
+<currency>USD</currency>
+<image>images/BMW_X4_xDrive30i_exterior_real.jpg</image>
+<interior>images/BMW_X4_xDrive30i_interior_real.jpg</interior>
+<description>Стильный кроссовер-купе с характером M Sport.</description>
+</car>
+
+<!-- 2. 4 Series Convertible -->
+<car id="2" series="4" segment="premium" featured="false">
+<name>BMW 4 Series</name>
+<model>Convertible M Sport</model>
+<body>Кабриолет</body>
+<engine>2.0L TwinPower Turbo</engine>
+<power>249 л.с.</power>
+<acceleration>6.4</acceleration>
+<price>68000</price>
+<currency>USD</currency>
+<image>images/BMW_4_Series_Convertible_exterior_real.jpg</image>
+<interior>images/BMW_4_Series_Convertible_interior_real.jpg</interior>
+<description>Свобода движения в каждом километре.</description>
+</car>
+
+<!-- 3. M5 Competition -->
+<car id="3" series="M" segment="m_power" featured="true">
+<name>BMW M5</name>
+<model>Competition xDrive</model>
+<body>Седан</body>
+<engine>4.4L V8 Hybrid M</engine>
+<power>727 л.с.</power>
+<acceleration>3.4</acceleration>
+<price>135000</price>
+<currency>USD</currency>
+<image>images/BMW_M5_Competition_exterior_real.jpg</image>
+<interior>images/BMW_M5_Competition_interior_real.jpg</interior>
+<description>Абсолютная мощь. Гибридная силовая установка.</description>
+</car>
+
+<!-- 4. i3s -->
+<car id="4" series="i" segment="budget" featured="false">
+<name>BMW i3s</name>
+<model>Electric Urban</model>
+<body>Хэтчбек</body>
+<engine>Electric Motor</engine>
+<power>184 л.с.</power>
+<acceleration>6.9</acceleration>
+<price>45000</price>
+<currency>USD</currency>
+<image>images/BMW_i3s_exterior_real.jpg</image>
+<interior>images/BMW_i3s_interior_real.jpg</interior>
+<description>Иконка электрического города.</description>
+</car>
+
+<!-- 5. X6 M50i -->
+<car id="5" series="X" segment="m_power" featured="false">
+<name>BMW X6</name>
+<model>M50i xDrive</model>
+<body>SAC</body>
+<engine>4.4L V8 TwinTurbo</engine>
+<power>530 л.с.</power>
+<acceleration>4.3</acceleration>
+<price>115000</price>
+<currency>USD</currency>
+<image>images/BMW_X6_M50i_exterior_real.jpg</image>
+<interior>images/BMW_X6_M50i_interior_real.jpg</interior>
+<description>Спорт и роскошь в кузове купе.</description>
+</car>
+
+<!-- 6. M2 Competition -->
+<car id="6" series="M" segment="m_power" featured="false">
+<name>BMW M2</name>
+<model>Competition</model>
+<body>Купе</body>
+<engine>3.0L I6 M TwinPower</engine>
+<power>460 л.с.</power>
+<acceleration>4.1</acceleration>
+<price>78000</price>
+<currency>USD</currency>
+<image>images/BMW_M2_Competition_exterior_real.jpg</image>
+<interior>images/BMW_M2_Competition_interior_real.jpg</interior>
+<description>Чистый драйв. Трековая версия.</description>
+</car>
+
+<!-- 7. X1 sDrive18i -->
+<car id="7" series="X" segment="budget" featured="false">
+<name>BMW X1</name>
+<model>sDrive18i M Sport</model>
+<body>SAV</body>
+<engine>1.5L TwinPower Turbo</engine>
+<power>136 л.с.</power>
+<acceleration>9.2</acceleration>
+<price>42000</price>
+<currency>USD</currency>
+<image>images/BMW_X1_sDrive18i_exterior_real.jpg</image>
+<interior>images/BMW_X1_sDrive18i_interior_real.jpg</interior>
+<description>Компактность и технологии нового поколения.</description>
+</car>
+
+<!-- 8. Z4 M40i -->
+<car id="8" series="Z" segment="premium" featured="false">
+<name>BMW Z4</name>
+<model>M40i</model>
+<body>Родстер</body>
+<engine>3.0L I6 M TwinPower</engine>
+<power>382 л.с.</power>
+<acceleration>4.4</acceleration>
+<price>75000</price>
+<currency>USD</currency>
+<image>images/BMW_Z4_M40i_exterior_real.jpg</image>
+<interior>images/BMW_Z4_M40i_interior_real.jpg</interior>
+<description>Эмоции под открытым небом.</description>
+</car>
+
+<!-- 9. X7 xDrive40i -->
+<car id="9" series="X" segment="luxury" featured="true">
+<name>BMW X7</name>
+<model>xDrive40i M Sport</model>
+<body>SAV Full-size</body>
+<engine>3.0L I6 Mild Hybrid</engine>
+<power>381 л.с.</power>
+<acceleration>5.8</acceleration>
+<price>105000</price>
+<currency>USD</currency>
+<image>images/BMW_X7_xDrive40i_exterior_real.jpg</image>
+<interior>images/BMW_X7_xDrive40i_interior_real.jpg</interior>
+<description>Флагманский внедорожник с потолком Sky Lounge.</description>
+</car>
+
+<!-- 10. i4 eDrive40 -->
+<car id="10" series="i" segment="premium" featured="true">
+<name>BMW i4</name>
+<model>eDrive40 Gran Coupé</model>
+<body>Электро Гран Купе</body>
+<engine>Electric Motor</engine>
+<power>340 л.с.</power>
+<acceleration>5.7</acceleration>
+<price>62000</price>
+<currency>USD</currency>
+<image>images/BMW_i4_eDrive40_exterior_real.jpg</image>
+<interior>images/BMW_i4_eDrive40_interior_real.jpg</interior>
+<description>Электрическая грация с запасом хода 590 км.</description>
+</car>
+
+<!-- 11. 5 Series 530i -->
+<car id="11" series="5" segment="business" featured="false">
+<name>BMW 5 Series</name>
+<model>530i xDrive</model>
+<body>Седан</body>
+<engine>2.0L TwinPower Turbo</engine>
+<power>255 л.с.</power>
+<acceleration>6.2</acceleration>
+<price>65000</price>
+<currency>USD</currency>
+<image>images/BMW_5_Series_530i_exterior_real.jpg</image>
+<interior>images/BMW_5_Series_530i_interior_real.jpg</interior>
+<description>Бизнес-класс нового поколения.</description>
+</car>
+</cars>
+</catalog>
