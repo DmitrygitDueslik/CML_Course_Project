@@ -7,169 +7,322 @@
 <address>Минск, пр-т Независимости, 120</address>
 </meta>
 <cars>
-<!-- 1. X4 -->
-<car id="1" series="X" segment="premium" featured="true">
+
+<car id="1" series="X" segment="mid" featured="true">
 <name>BMW X4</name>
 <model>xDrive30i M Sport</model>
-<body>SAC</body>
-<engine>2.0L TwinPower Turbo</engine>
-<power>249 л.с.</power>
-<acceleration>6.3</acceleration>
+<seriesLabel>X Серия</seriesLabel>
+<body>SAC (кросс-купе)</body>
+<year>2025</year>
+<badge>M Sport</badge>
+<badgeColor>#2563eb</badgeColor>
 <price>72000</price>
 <currency>USD</currency>
-<image>images/BMW_X4_xDrive30i_exterior_real.jpg</image>
-<interior>images/BMW_X4_xDrive30i_interior_real.jpg</interior>
-<description>Стильный кроссовер-купе с характером M Sport.</description>
+<exterior>images/BMW_X4_xDrive30i.png</exterior>
+<interior>images/BMW_X4_xDrive30i(2).png</interior>
+<description>Стильный кроссовер-купе с характером M Sport. Идеальное сочетание динамики SAC и практичности полноценного SUV. Система BMW iDrive 8, панорамная крыша, адаптивная подвеска M Sport.</description>
+<specs>
+<spec name="Двигатель">2.0L TwinPower Turbo I4</spec>
+<spec name="Мощность">249 л.с. / 183 кВт</spec>
+<spec name="Крутящий момент">400 Нм</spec>
+<spec name="Привод">xDrive AWD</spec>
+<spec name="КПП">8-ступ. Steptronic</spec>
+<spec name="Разгон 0–100">6.3 с</spec>
+<spec name="Макс. скорость">235 км/ч</spec>
+<spec name="Расход топлива">7.4 л/100 км</spec>
+<spec name="Длина">4 953 мм</spec>
+<spec name="Ширина">1 918 мм</spec>
+<spec name="Высота">1 621 мм</spec>
+<spec name="Масса">1 855 кг</spec>
+<spec name="Объём багажника">525 л</spec>
+</specs>
 </car>
 
-<!-- 2. 4 Series Convertible -->
-<car id="2" series="4" segment="premium" featured="false">
+<car id="2" series="4" segment="mid" featured="false">
 <name>BMW 4 Series</name>
 <model>Convertible M Sport</model>
+<seriesLabel>4 Серия</seriesLabel>
 <body>Кабриолет</body>
-<engine>2.0L TwinPower Turbo</engine>
-<power>249 л.с.</power>
-<acceleration>6.4</acceleration>
+<year>2025</year>
+<badge>Кабриолет</badge>
+<badgeColor>#2563eb</badgeColor>
 <price>68000</price>
 <currency>USD</currency>
-<image>images/BMW_4_Series_Convertible_exterior_real.jpg</image>
-<interior>images/BMW_4_Series_Convertible_interior_real.jpg</interior>
-<description>Свобода движения в каждом километре.</description>
+<exterior>images/BMW_4_Series_Convertible.png</exterior>
+<interior>images/BMW_4_Series_Convertible(2).png</interior>
+<description>Свобода движения в каждом километре. Электрический складной верх открывается за 18 секунд. Система BMW Live Cockpit Professional, адаптивный ксенон, подогрев сидений.</description>
+<specs>
+<spec name="Двигатель">2.0L TwinPower Turbo I4</spec>
+<spec name="Мощность">249 л.с. / 183 кВт</spec>
+<spec name="Крутящий момент">400 Нм</spec>
+<spec name="Привод">RWD / xDrive</spec>
+<spec name="КПП">8-ступ. Steptronic</spec>
+<spec name="Разгон 0–100">6.4 с</spec>
+<spec name="Макс. скорость">250 км/ч</spec>
+<spec name="Расход топлива">7.8 л/100 км</spec>
+<spec name="Длина">4 783 мм</spec>
+<spec name="Ширина">1 852 мм</spec>
+<spec name="Высота">1 389 мм</spec>
+<spec name="Масса">1 775 кг</spec>
+<spec name="Крыша">Электрическая складная</spec>
+</specs>
 </car>
 
-<!-- 3. M5 Competition -->
-<car id="3" series="M" segment="m_power" featured="true">
+<car id="3" series="M" segment="luxury" featured="true">
 <name>BMW M5</name>
 <model>Competition xDrive</model>
+<seriesLabel>M Серия</seriesLabel>
 <body>Седан</body>
-<engine>4.4L V8 Hybrid M</engine>
-<power>727 л.с.</power>
-<acceleration>3.4</acceleration>
+<year>2025</year>
+<badge>M Power</badge>
+<badgeColor>#ef4444</badgeColor>
 <price>135000</price>
 <currency>USD</currency>
-<image>images/BMW_M5_Competition_exterior_real.jpg</image>
-<interior>images/BMW_M5_Competition_interior_real.jpg</interior>
-<description>Абсолютная мощь. Гибридная силовая установка.</description>
+<exterior>images/BMW_M5_Competition.png</exterior>
+<interior>images/BMW_M5_Competition(2).png</interior>
+<description>Абсолютная мощь гибридной силовой установки. V8 + электромотор, суммарная отдача 727 л.с. Система M xDrive, активные амортизаторы, карбон-керамические тормоза.</description>
+<specs>
+<spec name="Двигатель">4.4L V8 Biturbo + Электромотор</spec>
+<spec name="Мощность">727 л.с. / 535 кВт</spec>
+<spec name="Крутящий момент">1 000 Нм</spec>
+<spec name="Привод">M xDrive AWD</spec>
+<spec name="КПП">8-ступ. M Steptronic</spec>
+<spec name="Разгон 0–100">3.4 с</spec>
+<spec name="Макс. скорость">305 км/ч</spec>
+<spec name="Расход топлива">10.2 л/100 км</spec>
+<spec name="Запас хода EV">69 км</spec>
+<spec name="Длина">5 097 мм</spec>
+<spec name="Ширина">1 903 мм</spec>
+<spec name="Масса">2 345 кг</spec>
+</specs>
 </car>
 
-<!-- 4. i3s -->
 <car id="4" series="i" segment="budget" featured="false">
 <name>BMW i3s</name>
 <model>Electric Urban</model>
+<seriesLabel>i Серия</seriesLabel>
 <body>Хэтчбек</body>
-<engine>Electric Motor</engine>
-<power>184 л.с.</power>
-<acceleration>6.9</acceleration>
+<year>2025</year>
+<badge>Электро</badge>
+<badgeColor>#10b981</badgeColor>
 <price>45000</price>
 <currency>USD</currency>
-<image>images/BMW_i3s_exterior_real.jpg</image>
-<interior>images/BMW_i3s_interior_real.jpg</interior>
-<description>Иконка электрического города.</description>
+<exterior>images/BMW_i3s.png</exterior>
+<interior>images/BMWI3_2().jpg</interior>
+<description>Иконка электрического города. Лёгкий кузов из CFRP, электромотор на задней оси, запас хода до 280 км. Идеален для городской езды и экологичного стиля жизни.</description>
+<specs>
+<spec name="Двигатель">Электромотор синхронный</spec>
+<spec name="Мощность">184 л.с. / 135 кВт</spec>
+<spec name="Крутящий момент">270 Нм</spec>
+<spec name="Привод">RWD (задний)</spec>
+<spec name="КПП">Одноступенчатая</spec>
+<spec name="Разгон 0–100">6.9 с</spec>
+<spec name="Макс. скорость">160 км/ч</spec>
+<spec name="Запас хода">280 км (WLTP)</spec>
+<spec name="Батарея">42.2 кВт·ч</spec>
+<spec name="Зарядка DC">50 кВт</spec>
+<spec name="Масса">1 365 кг</spec>
+<spec name="Кузов">CFRP + Алюминий</spec>
+</specs>
 </car>
 
-<!-- 5. X6 M50i -->
-<car id="5" series="X" segment="m_power" featured="false">
+<car id="5" series="X" segment="premium" featured="false">
 <name>BMW X6</name>
 <model>M50i xDrive</model>
+<seriesLabel>X Серия</seriesLabel>
 <body>SAC</body>
-<engine>4.4L V8 TwinTurbo</engine>
-<power>530 л.с.</power>
-<acceleration>4.3</acceleration>
+<year>2025</year>
+<badge>M Performance</badge>
+<badgeColor>#ef4444</badgeColor>
 <price>115000</price>
 <currency>USD</currency>
-<image>images/BMW_X6_M50i_exterior_real.jpg</image>
-<interior>images/BMW_X6_M50i_interior_real.jpg</interior>
-<description>Спорт и роскошь в кузове купе.</description>
+<exterior>images/BMW_X6_M50i.png</exterior>
+<interior>images/BMW_X6_M50i(2).png</interior>
+<description>Спорт и роскошь в кузове купе. V8 TwinTurbo, система M Sport Pro, активное рулевое управление, пневматическая подвеска. Иконичный дизайн кросс-купе.</description>
+<specs>
+<spec name="Двигатель">4.4L V8 TwinTurbo</spec>
+<spec name="Мощность">530 л.с. / 390 кВт</spec>
+<spec name="Крутящий момент">750 Нм</spec>
+<spec name="Привод">xDrive AWD</spec>
+<spec name="КПП">8-ступ. Steptronic Sport</spec>
+<spec name="Разгон 0–100">4.3 с</spec>
+<spec name="Макс. скорость">270 км/ч</spec>
+<spec name="Расход топлива">11.0 л/100 км</spec>
+<spec name="Длина">4 935 мм</spec>
+<spec name="Ширина">2 004 мм</spec>
+<spec name="Масса">2 180 кг</spec>
+<spec name="Колёса">21 дюйм</spec>
+</specs>
 </car>
 
-<!-- 6. M2 Competition -->
-<car id="6" series="M" segment="m_power" featured="false">
+<car id="6" series="M" segment="mid" featured="false">
 <name>BMW M2</name>
 <model>Competition</model>
+<seriesLabel>M Серия</seriesLabel>
 <body>Купе</body>
-<engine>3.0L I6 M TwinPower</engine>
-<power>460 л.с.</power>
-<acceleration>4.1</acceleration>
+<year>2025</year>
+<badge>Трековая</badge>
+<badgeColor>#ef4444</badgeColor>
 <price>78000</price>
 <currency>USD</currency>
-<image>images/BMW_M2_Competition_exterior_real.jpg</image>
-<interior>images/BMW_M2_Competition_interior_real.jpg</interior>
-<description>Чистый драйв. Трековая версия.</description>
+<exterior>images/BMW_M2_Competition.png</exterior>
+<interior>images/BMW_M2_Competition(2).png</interior>
+<description>Чистый драйв. Заднеприводное купе для трека и городских улиц. I6 Biturbo, механическая КПП, активный дифференциал, система M Track Mode.</description>
+<specs>
+<spec name="Двигатель">3.0L I6 M TwinPower Turbo</spec>
+<spec name="Мощность">460 л.с. / 338 кВт</spec>
+<spec name="Крутящий момент">550 Нм</spec>
+<spec name="Привод">RWD (задний)</spec>
+<spec name="КПП">6-ступ. М акула / 8-ступ.</spec>
+<spec name="Разгон 0–100">4.1 с</spec>
+<spec name="Макс. скорость">285 км/ч</spec>
+<spec name="Расход топлива">10.0 л/100 км</spec>
+<spec name="Длина">4 580 мм</spec>
+<spec name="Масса">1 730 кг</spec>
+<spec name="Тормоза">M Sport стальные/карбон</spec>
+<spec name="Колёса">19/20 дюйм</spec>
+</specs>
 </car>
 
-<!-- 7. X1 sDrive18i -->
 <car id="7" series="X" segment="budget" featured="false">
 <name>BMW X1</name>
 <model>sDrive18i M Sport</model>
+<seriesLabel>X Серия</seriesLabel>
 <body>SAV</body>
-<engine>1.5L TwinPower Turbo</engine>
-<power>136 л.с.</power>
-<acceleration>9.2</acceleration>
+<year>2025</year>
+<badge>Компакт</badge>
+<badgeColor>#2563eb</badgeColor>
 <price>42000</price>
 <currency>USD</currency>
-<image>images/BMW_X1_sDrive18i_exterior_real.jpg</image>
-<interior>images/BMW_X1_sDrive18i_interior_real.jpg</interior>
-<description>Компактность и технологии нового поколения.</description>
+<exterior>images/BMW_X1_sDrive18i.png</exterior>
+<interior>images/BMW_X1_sDrive18i(2).png</interior>
+<description>Компактный SAV нового поколения. Система iDrive 9 с изогнутым дисплеем, новая архитектура UKL2, просторный салон для компактного класса.</description>
+<specs>
+<spec name="Двигатель">1.5L TwinPower Turbo I3</spec>
+<spec name="Мощность">136 л.с. / 100 кВт</spec>
+<spec name="Крутящий момент">230 Нм</spec>
+<spec name="Привод">FWD / xDrive</spec>
+<spec name="КПП">7-ступ. DCT / 8-ступ.</spec>
+<spec name="Разгон 0–100">9.2 с</spec>
+<spec name="Макс. скорость">210 км/ч</spec>
+<spec name="Расход топлива">6.2 л/100 км</spec>
+<spec name="Длина">4 500 мм</spec>
+<spec name="Масса">1 540 кг</spec>
+<spec name="Дисплей">BMW iDrive 9 изогнутый</spec>
+</specs>
 </car>
 
-<!-- 8. Z4 M40i -->
-<car id="8" series="Z" segment="premium" featured="false">
+<car id="8" series="Z" segment="mid" featured="false">
 <name>BMW Z4</name>
-<model>M40i</model>
+<model>M40i Roadster</model>
+<seriesLabel>Z Серия</seriesLabel>
 <body>Родстер</body>
-<engine>3.0L I6 M TwinPower</engine>
-<power>382 л.с.</power>
-<acceleration>4.4</acceleration>
+<year>2025</year>
+<badge>Родстер</badge>
+<badgeColor>#2563eb</badgeColor>
 <price>75000</price>
 <currency>USD</currency>
-<image>images/BMW_Z4_M40i_exterior_real.jpg</image>
-<interior>images/BMW_Z4_M40i_interior_real.jpg</interior>
-<description>Эмоции под открытым небом.</description>
+<exterior>images/BMW_Z4_M40i.png</exterior>
+<interior>images/BMW_Z4_M40i(2).png</interior>
+<description>Эмоции под открытым небом. I6 M TwinPower, сбалансированное шасси 50/50, адаптивная подвеска Variable Sport. Электрическая мягкая крыша складывается за 10 сек.</description>
+<specs>
+<spec name="Двигатель">3.0L I6 M TwinPower Turbo</spec>
+<spec name="Мощность">382 л.с. / 281 кВт</spec>
+<spec name="Крутящий момент">500 Нм</spec>
+<spec name="Привод">RWD (задний)</spec>
+<spec name="КПП">8-ступ. Steptronic Sport</spec>
+<spec name="Разгон 0–100">4.4 с</spec>
+<spec name="Макс. скорость">250 км/ч</spec>
+<spec name="Расход топлива">8.4 л/100 км</spec>
+<spec name="Масса">1 495 кг</spec>
+<spec name="Крыша">Электр. мягкая, 10 сек</spec>
+</specs>
 </car>
 
-<!-- 9. X7 xDrive40i -->
-<car id="9" series="X" segment="luxury" featured="true">
+<car id="9" series="X" segment="premium" featured="true">
 <name>BMW X7</name>
 <model>xDrive40i M Sport</model>
+<seriesLabel>X Серия</seriesLabel>
 <body>SAV Full-size</body>
-<engine>3.0L I6 Mild Hybrid</engine>
-<power>381 л.с.</power>
-<acceleration>5.8</acceleration>
+<year>2025</year>
+<badge>Флагман</badge>
+<badgeColor>#f59e0b</badgeColor>
 <price>105000</price>
 <currency>USD</currency>
-<image>images/BMW_X7_xDrive40i_exterior_real.jpg</image>
-<interior>images/BMW_X7_xDrive40i_interior_real.jpg</interior>
-<description>Флагманский внедорожник с потолком Sky Lounge.</description>
+<exterior>images/BMW_X7_xDrive40i.png</exterior>
+<interior>images/BMW X7(2).jpg</interior>
+<description>Флагманский внедорожник с потолком Sky Lounge и 7 местами. Mild Hybrid, пневматическая подвеска, 4-зонный климат, массаж для всех сидений.</description>
+<specs>
+<spec name="Двигатель">3.0L I6 Mild Hybrid</spec>
+<spec name="Мощность">381 л.с. / 280 кВт</spec>
+<spec name="Крутящий момент">520 Нм</spec>
+<spec name="Привод">xDrive AWD</spec>
+<spec name="КПП">8-ступ. Steptronic</spec>
+<spec name="Разгон 0–100">5.8 с</spec>
+<spec name="Макс. скорость">250 км/ч</spec>
+<spec name="Расход топлива">9.2 л/100 км</spec>
+<spec name="Длина">5 151 мм</spec>
+<spec name="Масса">2 510 кг</spec>
+<spec name="Места">7</spec>
+<spec name="Крыша">Sky Lounge панорама</spec>
+</specs>
 </car>
 
-<!-- 10. i4 eDrive40 -->
-<car id="10" series="i" segment="premium" featured="true">
+<car id="10" series="i" segment="mid" featured="true">
 <name>BMW i4</name>
 <model>eDrive40 Gran Coupé</model>
+<seriesLabel>i Серия</seriesLabel>
 <body>Электро Гран Купе</body>
-<engine>Electric Motor</engine>
-<power>340 л.с.</power>
-<acceleration>5.7</acceleration>
+<year>2025</year>
+<badge>Электро</badge>
+<badgeColor>#10b981</badgeColor>
 <price>62000</price>
 <currency>USD</currency>
-<image>images/BMW_i4_eDrive40_exterior_real.jpg</image>
-<interior>images/BMW_i4_eDrive40_interior_real.jpg</interior>
-<description>Электрическая грация с запасом хода 590 км.</description>
+<exterior>images/BMW_i4_eDrive40.png</exterior>
+<interior>images/BMW_i4_eDrive40(2).png</interior>
+<description>Электрическая грация с запасом хода 590 км. Задний привод, тихая кабина, рекуперативное торможение. Оснащён BMW iDrive 8 и системой навигации с AR.</description>
+<specs>
+<spec name="Двигатель">Электромотор синхронный</spec>
+<spec name="Мощность">340 л.с. / 250 кВт</spec>
+<spec name="Крутящий момент">430 Нм</spec>
+<spec name="Привод">RWD (задний)</spec>
+<spec name="КПП">Одноступенчатая</spec>
+<spec name="Разгон 0–100">5.7 с</spec>
+<spec name="Макс. скорость">190 км/ч</spec>
+<spec name="Запас хода">590 км (WLTP)</spec>
+<spec name="Батарея">83.9 кВт·ч</spec>
+<spec name="Зарядка DC">205 кВт</spec>
+<spec name="Масса">2 125 кг</spec>
+</specs>
 </car>
 
-<!-- 11. 5 Series 530i -->
-<car id="11" series="5" segment="business" featured="false">
+<car id="11" series="5" segment="mid" featured="false">
 <name>BMW 5 Series</name>
 <model>530i xDrive</model>
+<seriesLabel>5 Серия</seriesLabel>
 <body>Седан</body>
-<engine>2.0L TwinPower Turbo</engine>
-<power>255 л.с.</power>
-<acceleration>6.2</acceleration>
+<year>2025</year>
+<badge>Бизнес</badge>
+<badgeColor>#2563eb</badgeColor>
 <price>65000</price>
 <currency>USD</currency>
-<image>images/BMW_5_Series_530i_exterior_real.jpg</image>
-<interior>images/BMW_5_Series_530i_interior_real.jpg</interior>
-<description>Бизнес-класс нового поколения.</description>
+<exterior>images/BMW_5_Series_530i.png</exterior>
+<interior>images/bmw5i23-04.jpg</interior>
+<description>Бизнес-класс нового поколения. Семейство 5 Series переосмыслено с полностью новой архитектурой CLAR2, изогнутым дисплеем iDrive 8 и полным набором ассистентов.</description>
+<specs>
+<spec name="Двигатель">2.0L TwinPower Turbo I4</spec>
+<spec name="Мощность">255 л.с. / 188 кВт</spec>
+<spec name="Крутящий момент">400 Нм</spec>
+<spec name="Привод">xDrive AWD</spec>
+<spec name="КПП">8-ступ. Steptronic</spec>
+<spec name="Разгон 0–100">6.2 с</spec>
+<spec name="Макс. скорость">250 км/ч</spec>
+<spec name="Расход топлива">7.5 л/100 км</spec>
+<spec name="Длина">5 060 мм</spec>
+<spec name="Ширина">1 900 мм</spec>
+<spec name="Масса">1 870 кг</spec>
+</specs>
 </car>
+
 </cars>
 </catalog>
