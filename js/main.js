@@ -176,7 +176,6 @@ document.addEventListener('DOMContentLoaded', function () {
     applyFilters();
   };
 
-  /* Автофильтр по URL: catalog.html?s=M */
   const urlSeries = new URLSearchParams(location.search).get('s');
   if (urlSeries) {
     const btn = document.querySelector(`.filter-btn[data-filter="${urlSeries}"]`);
